@@ -11,6 +11,6 @@ addBtn.addEventListener('click', () => {
       alert('Please enter a value!');
       return;
     }
-    // addTask(taskText);
-    // todoInput.value = ''; // Clear the input field
+     addTask(taskText);
+     todoInput.value = ''; // Clear the input field
   });
