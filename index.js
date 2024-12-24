@@ -14,3 +14,14 @@ addBtn.addEventListener('click', () => {
      addTask(taskText);
      todoInput.value = ''; // Clear the input field
   });
+
+
+  // Function to add a new to-do item
+  function addTask(taskText) {
+    const listItem = document.createElement('li');
+    listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+
+    const taskSpan = document.createElement('span');
+    taskSpan.textContent = taskText;
+
+    const actionsDiv = document.createElement('div');
