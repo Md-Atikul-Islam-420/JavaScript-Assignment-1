@@ -32,8 +32,7 @@ addBtn.addEventListener('click', () => {
     completeBtn.innerHTML = '✔';
     completeBtn.addEventListener('click', () => {
       taskSpan.style.textDecoration = taskSpan.style.textDecoration === 'line-through' ? '' : 'line-through';
-    }
-    )};
+    });
 
    // Edit button
    const editBtn = document.createElement('button');
@@ -45,5 +44,24 @@ addBtn.addEventListener('click', () => {
        taskSpan.textContent = newTaskText.trim();
      }
    });
+
+
+   // Delete button
+    const deleteBtn = document.createElement('button');
+    deleteBtn.className = 'btn btn-danger btn-sm';
+    deleteBtn.innerHTML = '🗑';
+    deleteBtn.addEventListener('click', () => {
+      todoList.removeChild(listItem);
+    });
+
+    actionsDiv.appendChild(completeBtn);
+    actionsDiv.appendChild(editBtn);
+    actionsDiv.appendChild(deleteBtn);
+
+    listItem.appendChild(taskSpan);
+    listItem.appendChild(actionsDiv);
+
+    todoList.appendChild(listItem);
+  }
 
 
